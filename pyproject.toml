@@ -1,0 +1,20 @@
+[project]
+name = "ai-service"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Kyrillos", email = "kerolloshamdi9@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "openai>=3.36.1",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+ai-service = "ai_service:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
