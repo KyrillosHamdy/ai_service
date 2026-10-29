@@ -12,6 +12,8 @@ CASES = [
 
 passed = 0
 for text, check in CASES:
+    result = None
+    error = None
     try:
         result = extract_tasks(text)
         ok = check(result)
@@ -19,8 +21,8 @@ for text, check in CASES:
         ok, error = False, f"ERROR: {e}"
     passed += ok
     print("PASS" if ok else "FAIL", "|", text)
-    if not ok:
+    if not ok and result is not None:
         print(result)
-    if not ok and 'error' in locals():
+    if error is not None:
         print(error)
 print(f"{passed}/{len(CASES)}")

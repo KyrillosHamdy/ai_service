@@ -23,12 +23,12 @@ LLM_MODEL=your_model_name
 ## Run an extraction example
 
 ```bash
-uv run python -m ai_service.chains
+uv run ai-service "Study fine-tuning for two hours tomorrow"
 ```
 
 ## Project structure
 
-- `src/ai_service/` - LLM client, extraction chain, and task schemas.
+- `src/ai_service/` - configuration, LLM adapter, extraction service, prompts, and task schemas.
 - `prompts/` - prompt templates used by the service.
 - `evals/` - evaluation scripts for task extraction.
 - `tests/` - automated tests.
